@@ -82,7 +82,7 @@ public class Main : MonoBehaviour
         coins.text = coinCount.ToString();
         attempts.text = attemptsCount.ToString();
         
-        lifes.text = $"{loseCount}/5";
+        lifes.text = $"{loseCount}";
 
     }
 

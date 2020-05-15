@@ -29,8 +29,11 @@ public class InstantiateCoin : MonoBehaviour
         Instantiate(Coin, position, Quaternion.identity, transform);
         Coin CoinObj = gameObject.GetComponentInChildren<Coin>();
         CoinObj.transform.localScale = new Vector3(CoinObj.transform.localScale.x - (0.01f * main.getAttemptsCount()), CoinObj.transform.localScale.y - (0.01f * main.getAttemptsCount()), CoinObj.transform.localScale.z);
-        CoinObj.GetComponent<CircleCollider2D>().radius = CoinObj.GetComponent<CircleCollider2D>().radius - (0.01f * main.getAttemptsCount());
+        CoinObj.GetComponent<CircleCollider2D>().radius = CoinObj.GetComponent<CircleCollider2D>().radius - (0.009f * main.getAttemptsCount());
+        CoinObj.setTime(10 - main.getAttemptsCount() / 3);
+
     }
+
 
     public bool getCanInstantiate()
     {

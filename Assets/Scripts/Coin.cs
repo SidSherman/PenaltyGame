@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
 
 {
 
-private int timeToDissapear = 3;
+private float timeToDissapear = 10;
 public float waitTime = 1f;
 //public Main main;
 //public InstantiateCoin instantiate; 
@@ -27,10 +27,14 @@ void Update(){
     
 }
 
+
+public void setTime(float time){
+    timeToDissapear = time;
+}
 IEnumerator InviseCoin(float time, float waitTime)
      {
-        yield return new WaitForSeconds(waitTime);
-        for(int i = 0; i < time; i++){
+        yield return new WaitForSeconds(time);
+        for(int i = 0; i < 3; i++){
                 objRenderer.color = new Color(objRenderer.color.r, objRenderer.color.g, objRenderer.color.b, 0f);
                 yield return new WaitForSeconds(waitTime);
                 objRenderer.color = new Color(objRenderer.color.r, objRenderer.color.g, objRenderer.color.b, 1f);
