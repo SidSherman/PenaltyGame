@@ -5,3 +5,5 @@
 К unity уже подключён  FB analytics, one signal, firebase, Яндекс Метрика...
 
 Демонстрация геймплея https://www.youtube.com/watch?v=s_aAZurGcRY
+
+Мне стыдно за это, но пусть будет
